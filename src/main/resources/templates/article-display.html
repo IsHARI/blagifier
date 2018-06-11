@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title th:text="${article.getTitle()}+' — Blagifier'"></title>
+</head>
+<body>
+<main>
+    <h1 th:text="${article.getTitle()}"></h1>
+    <h6 th:text="'Date created: '+${article.getDateCreated()}"></h6>
+    <p th:text="${article.getBody()}"></p>
+</main>
+</body>
+</html>
