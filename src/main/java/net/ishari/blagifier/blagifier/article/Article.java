@@ -2,10 +2,7 @@ package net.ishari.blagifier.blagifier.article;
 
 import com.github.slugify.Slugify;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -16,6 +13,7 @@ public class Article {
     private String title;
     @Column(unique = true)
     private String slug;
+    @Lob
     private String body;
     private LocalDate dateCreated;
     private LocalDate dateUpdated;
